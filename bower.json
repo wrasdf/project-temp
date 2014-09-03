@@ -1,0 +1,26 @@
+{
+  "name": "life-insurance",
+  "version": "0.0.1",
+  "authors": [
+    "Kerry"
+  ],
+  "description": "Life Insurance",
+  "keywords": [
+    "Life",
+    "Insurance"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "swig": "~1.4.2",
+    "jquery": "~2.1.1",
+    "pure": "~0.5.0"
+  }
+}
