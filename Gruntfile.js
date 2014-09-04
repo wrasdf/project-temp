@@ -8,7 +8,7 @@ module.exports = function (grunt) {
     stylus: {
       compile: {
         files: {
-          '<%= devDir %>/styles/main.css': ['<%=devDir%>/styles/**/*.styl']
+          '<%= devDir %>/styles/main.css': ['<%=devDir%>/styles/main.styl']
         }
       }
     },
