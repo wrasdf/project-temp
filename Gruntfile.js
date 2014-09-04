@@ -137,6 +137,20 @@ module.exports = function (grunt) {
           base: '<%= publicDir %>'
         }
       }
+    },
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js',
+        singleRun: true
+      }
+    },
+    shell: {
+        options: {
+            stderr: false
+        },
+        jsut: {
+            command: './node_modules/karma/bin/karma start'
+        }
     }
   });
 
@@ -151,6 +165,8 @@ module.exports = function (grunt) {
       'watch'
     ]);
   });
+
+  grunt.registerTask('test', ['shell:jsut']);
 
   grunt.registerTask('build', [
     'clean',
