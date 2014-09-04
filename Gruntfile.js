@@ -60,7 +60,21 @@ module.exports = function (grunt) {
         }
       }
     },
-
+    rev: {
+      options: {
+        encoding: 'utf8',
+        algorithm: 'md5',
+        length: 8
+      },
+      assets: {
+        files: [{
+          src: [
+            '<%= publicDir %>/js/{,*/}*.js',
+            '<%= publicDir %>/styles/{,*/}*.css'
+          ]
+        }]
+      }
+    },
     htmlmin: {
       dist: {
         options: {
@@ -146,6 +160,7 @@ module.exports = function (grunt) {
     'concat',
     'cssmin',
     'uglify',
+    'rev',
     'usemin',
     'htmlmin'
   ]);
