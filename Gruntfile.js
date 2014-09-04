@@ -60,6 +60,29 @@ module.exports = function (grunt) {
         }
       }
     },
+
+    htmlmin: {
+      dist: {
+        options: {
+          collapseBooleanAttributes: true,
+          collapseWhitespace: true,
+          conservativeCollapse: true,
+          removeAttributeQuotes: true,
+          removeCommentsFromCDATA: true,
+          removeEmptyAttributes: true,
+          removeOptionalTags: true,
+          removeRedundantAttributes: true,
+          useShortDoctype: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= publicDir %>',
+          src: '{,*/}*.html',
+          dest: '<%= publicDir %>'
+        }]
+      }
+    },
+
     connect: {
       options: {
         port: 9000,
@@ -123,6 +146,7 @@ module.exports = function (grunt) {
     'concat',
     'cssmin',
     'uglify',
-    'usemin'
+    'usemin',
+    'htmlmin'
   ]);
 };
